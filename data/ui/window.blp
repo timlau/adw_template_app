@@ -1,0 +1,97 @@
+using Gtk 4.0;
+using Adw 1;
+
+template ExampleMainWindow : Adw.ApplicationWindow {
+  styles ["devel"]
+  title: _("My Application");
+  default-width: 800;
+  default-height: 600;
+
+  Adw.ToastOverlay toast_overlay {
+    Adw.Leaflet leaflet {
+      can-navigate-back: true;
+      can-unfold: false;
+
+      Gtk.Box {
+        orientation: vertical;
+
+        Adw.HeaderBar titlebar {
+          centering-policy: strict;
+
+          [title]
+          Adw.ViewSwitcherTitle title {
+            stack: view_stack;
+          }
+          [end]
+          Gtk.MenuButton {
+            tooltip-text: _("Main Menu");
+            icon-name: "open-menu-symbolic";
+            menu-model: main-menu;
+          }
+        }
+
+        Gtk.Box main_content {
+          orientation: vertical;
+          Adw.ViewStack view_stack {
+            vexpand: true;
+            hexpand: true;
+
+            Adw.ViewStackPage page_one {
+              name: "page_one";
+              title: _("Page One");
+              icon-name: "accessories-dictionary-symbolic";
+              child: Gtk.Box page_one_content {
+                  orientation: vertical;
+                  Gtk.Label {
+                    hexpand: true;
+                    vexpand: true;
+                    label: "Page One";
+                    styles ["title-1","accent"]
+
+                  }
+              };
+
+            }
+
+            Adw.ViewStackPage page_two {
+              name: "page_two";
+              title: _("Page Two");
+              icon-name: "accessories-dictionary-symbolic";
+              child: Gtk.Box page_two_content {
+                  orientation: vertical;
+                  Gtk.Label {
+                    hexpand: true;
+                    vexpand: true;
+                    label: "Page Two";
+                    styles ["title-1","accent"]
+
+                  }
+              };
+            }
+
+          }
+
+          Adw.ViewSwitcherBar {
+            stack: view_stack;
+            reveal: bind title.title-visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+menu main-menu {
+  section {
+    item {
+      label: _("Preferences");
+      action: "app.preferences";
+    }
+
+    item {
+      label: _("About");
+      action: "app.about";
+    }
+  }
+}
+
