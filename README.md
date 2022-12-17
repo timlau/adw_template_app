@@ -6,7 +6,7 @@ A template for building a [libadwaita](https://gnome.pages.gitlab.gnome.org/liba
   * Adw.ApplicationWindow
   * Adw.Leaflet
   * Adw.Stack and friends
-* ui is build using blueprint
+* ui is build using [blueprint](https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/)
 * use Gtk.Template to connect the ui with the python class
 * resources stored in GRessouce (.ui & style.css)
 * settings stored in GSettings (win dimentions is saved at close)
