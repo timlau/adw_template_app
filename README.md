@@ -11,10 +11,7 @@ A template for building a [libadwaita](https://gnome.pages.gitlab.gnome.org/liba
 - resources stored in GRessouce (.ui & style.css)
 - settings stored in GSettings (win dimentions is saved at close)
 - using meson to build/install
-- easy to transform into a new project
-  - edit the project, APPLICATION_ID & APPLICATION_ROOT in the root meson.build
-  - rename example/, data/example.-.xml.ini to match you new project name
-  - change the app-id in build-aux/flatpak/org.mydomain.Example and rename the .yml file to match your app id.
+- easy to transform into a new project check [customize.md](customize.md) for details
   
 
 
