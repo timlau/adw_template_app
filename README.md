@@ -1,4 +1,4 @@
-# adw_template_app
+# Pyhton Libadwaita & Gtk4 Template application
 A template for building a [libadwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/index.html) and [Gtk4](https://docs.gtk.org/gtk4/index.html) application in python
 
 * A flexible app using 
