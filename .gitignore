@@ -1,2 +1,4 @@
 example/constants.py
 builddir/
+.flatpak/
+.flatpak-builder/

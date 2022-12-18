@@ -5,6 +5,13 @@ configure_file(
 )
 
 configure_file(
+  input:  meson.project_name() + '.in',
+  output: meson.project_name(),
+  configuration: conf,
+  install_dir: get_option('bindir')
+)
+
+configure_file(
   input: 'constants.py.in',
   output: 'constants.py',
   configuration: configuration_data({

@@ -1,6 +1,6 @@
 app-id: org.mydomain.Example
 runtime: org.gnome.Platform
-runtime-version: "master"
+runtime-version: "43"
 sdk: org.gnome.Sdk
 command: example
 finish-args:
@@ -8,14 +8,22 @@ finish-args:
   - --share=ipc
   - --socket=fallback-x11
   - --socket=wayland
+  - --device=dri
 build-options:
   build-args:
     - --share=network
 modules:
-  - name: org.mydomain.Example
-    builddir: true
+  - name: blueprint-compiler
     buildsystem: meson
     sources:
       - type: git
-        branch: main
-        url: https://github.com/timlau/adw_template_app
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler
+        tag: v0.6.0
+  - name: org.mydomain.Example
+    builddir: true
+    buildsystem: meson
+    config-opts:
+      - -Dbuildtype=release
+    sources:
+      - type: dir
+        path: ../../.
