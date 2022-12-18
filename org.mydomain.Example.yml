@@ -1,0 +1,21 @@
+app-id: org.mydomain.Example
+runtime: org.gnome.Platform
+runtime-version: "master"
+sdk: org.gnome.Sdk
+command: example
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+build-options:
+  build-args:
+    - --share=network
+modules:
+  - name: org.mydomain.Example
+    builddir: true
+    buildsystem: meson
+    sources:
+      - type: git
+        branch: main
+        url: https://github.com/timlau/adw_template_app
