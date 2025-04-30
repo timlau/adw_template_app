@@ -32,7 +32,7 @@ flatpak-builder --force-clean .flatpak/repo build-aux/flatpak/org.mydomain.Examp
 Run the flatpak
 
 ```
-flatpak-builder --run .flatpak/repo build-aux/flatpak/org.mydomain.Example.yml
+flatpak-builder --run .flatpak/repo build-aux/flatpak/org.mydomain.Example.yml example
 ```
 
 ## Requirements

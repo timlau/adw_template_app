@@ -1,6 +1,6 @@
 app-id: org.mydomain.Example
 runtime: org.gnome.Platform
-runtime-version: "43"
+runtime-version: "48"
 sdk: org.gnome.Sdk
 command: example
 finish-args:
@@ -18,7 +18,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler
-        tag: v0.6.0
+        tag: v0.16.0
   - name: org.mydomain.Example
     builddir: true
     buildsystem: meson
