@@ -21,12 +21,15 @@ APPLICATION_ROOT = '/org/mydomain/Example'
 ## example/
 
 rename the **example** directory
+
 ```bash
 mv example/ myapp/
 ```
+
 ## example/example.in
 
 rename the **example/example.in**
+
 ```
 mv example/example.in example/myapp.in
 ```
@@ -46,6 +49,7 @@ rename **data/example.gschema.xml.in**
 ```
 mv data/data/example.gschema.xml.in.in data/data/myapp.gschema.xml.in
 ```
+
 ## build-aux/flatpak/org.mydomain.Example.yml
 
 rename **build-aux/flatpak/org.mydomain.Example.yml**
@@ -61,5 +65,5 @@ Change the **app-id:** to **org.yourdomain.MyApp**
 ```yaml
 app-id: org.mydomain.Example
 runtime: org.gnome.Platform
-runtime-version: "43"
+runtime-version: "48"
 ```

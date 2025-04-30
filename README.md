@@ -25,6 +25,8 @@ run this script to build and run the application
 
 Build as flatpak
 
+**org.gnome.Sdk/\*/48 runtime must be installed**
+
 ```
 flatpak-builder --force-clean .flatpak/repo build-aux/flatpak/org.mydomain.Example.yml
 ```
@@ -32,14 +34,14 @@ flatpak-builder --force-clean .flatpak/repo build-aux/flatpak/org.mydomain.Examp
 Run the flatpak
 
 ```
-flatpak-builder --run .flatpak/repo build-aux/flatpak/org.mydomain.Example.yml example
+flatpak-builder --run .flatpak/repo build-aux/flatpak/org.mydomain.Example.yml exampl
 ```
 
 ## Requirements
 
 - gtk4-devel >= 4.5
-- libadwaita-devel >= 1.5
-- blueprint-compiler
+- libadwaita-devel >= 1.6
+- blueprint-compiler >= 0.16
 - python3-gobject
 - python3 >= 3.10
 - meson
